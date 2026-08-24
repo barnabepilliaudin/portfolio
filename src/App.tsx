@@ -28,22 +28,26 @@ const copy = {
 
 function App() {
   const [language, setLanguage] = useState<Language>('en')
+  const [menuOpen, setMenuOpen] = useState(false)
   const t = copy[language]
 
   return (
     <div className="site-shell">
       <header className="topbar">
         <a className="wordmark" href="#top" aria-label="Back to top">BP<span>.</span></a>
-        <nav aria-label="Main navigation">
-          <a href="#experience">{t.work}</a><a href="#profile">{t.about}</a><a href="/resume.html">{t.resume}</a>
+        <button className="menu-toggle" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="main-navigation" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}>
+          <span /><span /><span />
+        </button>
+        <nav id="main-navigation" className={menuOpen ? 'menu-open' : ''} aria-label="Main navigation">
+          <a href="#experience" onClick={() => setMenuOpen(false)}>{t.work}</a><a href="#profile" onClick={() => setMenuOpen(false)}>{t.about}</a><a href={language === 'en' ? '/resume-en.html' : '/resume.html'} onClick={() => setMenuOpen(false)}>{t.resume}</a>
           <button className="language-switch" type="button" onClick={() => setLanguage(language === 'en' ? 'fr' : 'en')} aria-label="Change language">{language === 'en' ? 'FR' : 'EN'}</button>
-          <a className="nav-contact" href="mailto:contact@barnabepilliaudin.fr">{t.talk} <span>↗</span></a>
+          <a className="nav-contact" href="mailto:contact@barnabepilliaudin.fr" onClick={() => setMenuOpen(false)}>{t.talk} <span>↗</span></a>
         </nav>
       </header>
 
       <main id="top">
         <section className="hero-section">
-          <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> {t.available}</p><h1>{t.hero}<br /><em>{t.heroAccent}</em></h1><p className="hero-intro">{t.intro}</p><div className="hero-actions"><a className="button button-dark" href="#experience">{t.seeWork} <span>↓</span></a><a className="button button-outline" href="/resume.html">{t.viewResume} <span>↗</span></a></div></div>
+          <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> {t.available}</p><h1>{t.hero}<br /><em>{t.heroAccent}</em></h1><p className="hero-intro">{t.intro}</p><div className="hero-actions"><a className="button button-dark" href="#experience">{t.seeWork} <span>↓</span></a><a className="button button-outline" href={language === 'en' ? '/resume-en.html' : '/resume.html'}>{t.viewResume} <span>↗</span></a></div></div>
           <div className="hero-console" aria-label="Technology overview"><div className="console-bar"><span /><span /><span /><b>barnabe.dev / stack</b></div><div className="console-body"><p><i>const</i> developer = &#123;</p><p className="indent">name: <strong>'Barnabé'</strong>,</p><p className="indent">stack: [<strong>'TypeScript'</strong>,</p><p className="indent double"><strong>'Golang'</strong>, <strong>'Node.js'</strong>],</p><p className="indent">toolchain: [<strong>'Hono'</strong>,</p><p className="indent double"><strong>'Kysely'</strong>, <strong>'Remeda'</strong>,</p><p className="indent double"><strong>'pnpm'</strong>, <strong>'Fiber'</strong>,</p><p className="indent double"><strong>'GORM'</strong>, <strong>'oxlint'</strong>,</p><p className="indent double"><strong>'golint'</strong>],</p><p className="indent">ships: <strong>true</strong></p><p>&#125;</p><p className="console-cursor">▮</p></div><div className="console-caption">FULL STACK / DEVOPS / AI</div></div>
         </section>
 
