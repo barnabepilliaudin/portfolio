@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Barnabé Pilliaudin</title>
+  <style>
+    :root { --ink:#17202a; --muted:#677179; --teal:#138f88; --paper:#f5f4ef; --line:#d5d8d3; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.55 Arial,sans-serif; }
+    .actions { position:fixed; top:20px; right:20px; display:flex; gap:8px; }
+    .actions a { padding:12px 16px; color:#fff; background:var(--teal); font-weight:700; text-decoration:none; }
+    .actions .back { color:var(--ink); background:#fff; border:1px solid var(--line); }
+    .actions .back { position:fixed; top:20px; left:20px; }
+    .actions .language { color:var(--ink); background:#fff; border:1px solid var(--line); }
+    .resume { max-width:960px; margin:40px auto; padding:56px 64px; background:#fff; }
+    header { border-bottom:3px solid var(--teal); padding-bottom:28px; }
+    h1 { margin:0; font-size:44px; letter-spacing:-2px; }
+    .role { margin:8px 0 12px; color:var(--teal); font-weight:700; letter-spacing:3px; text-transform:uppercase; }
+    .contact { color:var(--muted); font-size:14px; }
+    .layout { display:grid; grid-template-columns:220px 1fr; gap:48px; padding-top:34px; }
+    h2 { margin:0 0 14px; color:var(--teal); font-size:13px; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid var(--line); padding-bottom:10px; }
+    h3 { margin:0; font-size:19px; }
+    p { margin:0 0 14px; }
+    section { margin-bottom:28px; }
+    ul { margin:0; padding-left:18px; }
+    li { margin-bottom:7px; }
+    .muted { color:var(--muted); }
+    .entry { margin-bottom:27px; }
+    .entry-meta { color:var(--muted); font-size:13px; margin:3px 0 10px; }
+    a { color:var(--teal); }
+    @media (max-width:700px) { .actions { top:12px; right:12px; } .actions .back { top:12px; left:12px; } .actions a { padding:9px 11px; font-size:13px; } .resume { margin:0; padding:70px 22px 32px; } h1{font-size:36px;} .layout{display:block;} .sidebar{margin-bottom:34px;} }
+    @media print { body{background:#fff;} .resume{margin:0; padding:20px 0;} .actions{display:none;} }
+  </style>
+</head>
+<body>
+  <div class="actions"><a class="back" href="/">← Back</a><a class="language" href="/resume.html">FR</a><a href="/CV_PILLIAUDIN_BARNABE.pdf" download="Barnabe-Pilliaudin-CV.pdf">Download PDF</a></div>
+  <article class="resume">
+    <header>
+      <h1>Barnabé Pilliaudin</h1>
+      <p class="role">Full Stack Web Developer</p>
+      <p class="contact">Courbevoie (92400), France · 06 01 14 26 36 · <a href="mailto:contact@barnabepilliaudin.fr">contact@barnabepilliaudin.fr</a><br><a href="https://linkedin.com/in/barnabepilliaudin">linkedin.com/in/barnabepilliaudin</a> · <a href="https://github.com/BarnabePILLIAUDIN">github.com/BarnabePILLIAUDIN</a> · <a href="https://gitlab.com/barnabePILLIAUDIN">gitlab.com/barnabePILLIAUDIN</a></p>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <section><h2>Skills</h2><p><b>Front end</b><br>TypeScript, JavaScript, React / Next.js, Vue / Nuxt, Tailwind CSS</p><p><b>Back end</b><br>Node.js, Golang</p><p><b>Databases</b><br>PostgreSQL, MySQL, MongoDB</p><p><b>DevOps & Cloud</b><br>Docker, Kubernetes, Terraform, Ansible, Scaleway, AWS</p><p><b>AI</b><br>Claude, Cursor, Mastra</p><p><b>Tools</b><br>Git, GitHub</p></section>
+        <section><h2>Education</h2><p><b>2024 — 2026</b><br><b>Master's in DevOps</b><br><span class="muted">Sup de Vinci · Work-study</span></p><p><b>2023 — 2024</b><br><b>Bachelor's in Software Development</b><br><span class="muted">Sup de Vinci · Work-study</span></p><p><b>2021 — 2023</b><br><b>Preparatory cycle</b><br><span class="muted">Sup de Vinci</span></p></section>
+        <section><h2>Languages</h2><p>French (native)<br>English (B2)</p></section>
+        <section><h2>Interests</h2><p>Motorsports, rugby, football, motorcycling</p></section>
+      </aside>
+      <main>
+        <section><p>Full Stack Developer with 3 years of startup experience. I deliver features end to end, from development to production, with a strong focus on code quality, security, and performance.</p></section>
+        <section><h2>Professional experience</h2><div class="entry"><h3>Full Stack Developer · Cyna</h3><p class="entry-meta">January 2026 — October 2026 · Work-study · Clichy</p><ul><li>Developing the full-stack platform that lets customers subscribe to a managed SOC.</li><li>Automated support with AI agents (Mastra) and contributed to an internal SOAR processing more than 90% of alerts.</li><li>Created Cursor rules, skills, and Claude personas to improve the accuracy of generated code.</li></ul></div><div class="entry"><h3>DevOps Engineer · Cyna</h3><p class="entry-meta">August 2024 — January 2026 · Work-study · Clichy</p><ul><li>Deployed internal tools with Docker and Kubernetes.</li><li>Built an Ansible playbook and Terraform module for secure VM deployment on Scaleway.</li><li>Built a Prometheus exporter, Slack monitoring, and n8n automations.</li></ul></div><div class="entry"><h3>Web & Mobile Developer · JProject</h3><p class="entry-meta">May 2023 — July 2024 · Internship then work-study · Cergy</p><ul><li>Built a Nuxt.js / Django website platform, then migrated the frontend to Next.js.</li><li>Developed the companion Flutter mobile application and automated custom demo websites.</li></ul></div></section>
+        <section><h2>Projects</h2><p><b>CI/CD pipeline</b> · DevOps study project, Sup de Vinci · 2026<br>Automated tests, vulnerability scanning, image builds, infrastructure as code, and Kubernetes.</p><p><b>E-commerce website</b> · Sup de Vinci · 2024<br>Administration interface, Golang backend, and Next.js frontend. <a href="https://github.com/KrispyTech/airneis">View on GitHub ↗</a></p></section>
+      </main>
+    </div>
+  </article>
+</body>
+</html>
