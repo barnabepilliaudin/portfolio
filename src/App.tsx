@@ -1,16 +1,16 @@
-import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import "./App.css"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Main from "./components/Main"
 
 const App = () => {
-  return (
-    <div className="site-shell">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
-};
+	return (
+		<div className="site-shell">
+			<Header />
+			<Main />
+			<Footer />
+		</div>
+	)
+}
 
-export default App;
+export default App
