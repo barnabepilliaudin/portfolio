@@ -43,13 +43,14 @@ const Navbar = () => {
 			type: "button",
 			label: language === "en" ? "FR" : "EN",
 			"aria-label": "Change language",
-			className: "language-switch",
+			className:
+				"border-line w-full cursor-pointer appearance-none border-0 border-b bg-transparent px-0 py-3 text-left font-mono text-xs font-medium text-ink md:w-auto md:border md:px-2 md:py-1.5 md:text-center",
 			onClick: handleChangeLanguage,
 		},
 		{
 			label: t("talk"),
 			href: "mailto:contact@barnabepilliaudin.fr",
-			className: "nav-contact",
+			className: "border-b border-ink pb-1 max-md:border-b-0",
 			onClick: handleSetIsOpenMenu(false),
 		},
 	]
@@ -57,11 +58,15 @@ const Navbar = () => {
 	return (
 		<nav
 			id="main-navigation"
-			className={isMenuOpen ? "menu-open" : ""}
+			className={`border-line bg-paper shadow-menu absolute top-18 right-5 left-5 z-10 flex flex-col items-stretch gap-0 border px-5 py-5 text-sm font-semibold md:static md:flex md:flex-row md:items-center md:gap-9 md:border-0 md:bg-transparent md:p-0 md:shadow-none ${isMenuOpen ? "flex" : "hidden"}`}
 			aria-label="Main navigation"
 		>
 			{map(navbarItems, ({ label, ...props }, count) => (
-				<NavbarItem {...props} key={`navbarItem-${count}`}>
+				<NavbarItem
+					{...props}
+					className={`hover:text-teal py-3 transition-colors duration-200 md:py-0 ${props.className ?? ""}`}
+					key={`navbarItem-${count}`}
+				>
 					{label}
 				</NavbarItem>
 			))}

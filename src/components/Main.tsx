@@ -4,89 +4,105 @@ const Main = () => {
 	const { t, language } = useLanguage()
 
 	return (
-		<main id="top">
-			<section className="hero-section">
-				<div className="hero-copy">
-					<p className="eyebrow">
-						<span className="status-dot" /> {t("available")}
+		<main id="top" className="mx-auto max-w-7xl px-5 md:px-10">
+			<section className="relative flex min-h-0 flex-col items-stretch md:min-h-148 md:flex-row md:items-center">
+				<div className="z- relative animate-[enter_.8s_both_ease-out] py-10 md:py-16 md:pb-20">
+					<p className="text-teal font-mono text-xs font-medium tracking-wide uppercase">
+						<span className="bg-teal shadow-status mr-2 inline-block h-2 w-2 rounded-full align-middle" />{" "}
+						{t("available")}
 					</p>
-					<h1>
+					<h1 className="font-display my-5 max-w-3xl text-6xl leading-none font-semibold tracking-tighter md:my-7 md:mb-6 md:text-8xl">
 						{t("hero")}
 						<br />
-						<em>{t("heroAccent")}</em>
+						<em className="text-teal not-italic">{t("heroAccent")}</em>
 					</h1>
-					<p className="hero-intro">{t("intro")}</p>
-					<div className="hero-actions">
-						<a className="button button-dark" href="#experience">
-							{t("seeWork")} <span>↓</span>
+					<p className="text-muted max-w-lg text-base leading-relaxed md:text-lg">{t("intro")}</p>
+					<div className="mt-7 flex items-center gap-3.5 md:mt-9 md:gap-7">
+						<a
+							className="bg-ink inline-flex flex-1 items-center justify-between gap-6 px-3.5 py-3.5 text-xs font-bold text-white md:flex-none md:px-4.5 md:py-4"
+							href="#experience"
+						>
+							<span className="text-white">{t("seeWork")}</span>{" "}
+							<span className="text-lime text-base">↓</span>
 						</a>
 						<a
-							className="button button-outline"
+							className="border-ink inline-flex flex-1 items-center justify-between gap-6 border px-3.5 py-3.5 text-xs font-bold md:flex-none md:px-4.5 md:py-4"
 							href={language === "en" ? "/resume-en.html" : "/resume.html"}
 						>
-							{t("viewResume")} <span>↗</span>
+							<span>{t("viewResume")}</span> <span className="text-teal text-base">↗</span>
 						</a>
 					</div>
 				</div>
-				<div className="hero-console" aria-label="Technology overview">
-					<div className="console-bar">
-						<span />
-						<span />
-						<span />
-						<b>barnabe.dev / stack</b>
+				<div
+					className="bg-navy shadow-console mt-2.5 mb-20 w-full text-slate-100 md:mt-0 md:mb-0 md:ml-auto md:w-96"
+					aria-label="Technology overview"
+				>
+					<div className="flex items-center gap-1 border-b border-slate-600 px-4 py-3 font-mono text-xs text-slate-400">
+						<span className="h-2 w-2 rounded-full bg-[#e06b5f]" />
+						<span className="h-2 w-2 rounded-full bg-[#e5be62]" />
+						<span className="h-2 w-2 rounded-full bg-[#76b99c]" />
+						<b className="ml-auto font-normal">barnabe.dev / stack</b>
 					</div>
-					<div className="console-body">
+					<div className="[&_strong]:text-lime px-6 py-7 pb-6 font-mono text-sm leading-loose [&_i]:text-fuchsia-300 [&_i]:not-italic [&_strong]:font-normal">
 						<p>
 							<i>const</i> developer = &#123;
 						</p>
-						<p className="indent">
+						<p className="pl-6">
 							name: <strong>'Barnabé'</strong>,
 						</p>
-						<p className="indent">
+						<p className="pl-6">
 							stack: [<strong>'TypeScript'</strong>,
 						</p>
-						<p className="indent double">
+						<p className="pl-12">
 							<strong>'Golang'</strong>, <strong>'Node.js'</strong>],
 						</p>
-						<p className="indent">
+						<p className="pl-6">
 							toolchain: [<strong>'Hono'</strong>,
 						</p>
-						<p className="indent double">
+						<p className="pl-12">
 							<strong>'Kysely'</strong>, <strong>'Remeda'</strong>,
 						</p>
-						<p className="indent double">
+						<p className="pl-12">
 							<strong>'pnpm'</strong>, <strong>'Fiber'</strong>,
 						</p>
-						<p className="indent double">
+						<p className="pl-12">
 							<strong>'GORM'</strong>, <strong>'oxlint'</strong>,
 						</p>
-						<p className="indent double">
+						<p className="pl-12">
 							<strong>'golint'</strong>],
 						</p>
-						<p className="indent">
+						<p className="pl-6">
 							ships: <strong>true</strong>
 						</p>
 						<p>&#125;</p>
-						<p className="console-cursor">▮</p>
+						<p className="text-teal mt-3">▮</p>
 					</div>
-					<div className="console-caption">FULL STACK / DEVOPS / AI</div>
+					<div className="text-lime border-t border-slate-600 px-4 py-3 font-mono text-xs tracking-wide">
+						FULL STACK / DEVOPS / AI
+					</div>
 				</div>
 			</section>
 
-			<section className="experience-section" id="experience">
-				<div className="section-heading">
-					<p className="eyebrow">01 / {t("experience")}</p>
-					<span className="section-rule" />
+			<section className="border-line border-b py-16.25 md:py-25" id="experience">
+				<div className="mb-10 flex items-center gap-6">
+					<p className="text-teal font-mono text-xs font-medium tracking-wide whitespace-nowrap uppercase">
+						01 / {t("experience")}
+					</p>
+					<span className="bg-line h-px w-full" />
 				</div>
-				<p className="section-lead">{t("profile")}</p>
-				<div className="experience-list">
-					<article className="experience-row">
-						<span className="experience-date">2026</span>
-						<div>
-							<h2>{t("cynaFull")}</h2>
-							<p className="experience-meta">{t("cynaFullMeta")}</p>
-							<p>{t("cynaFullIntro")}</p>
-							<ul>
+				<p className="text-muted mb-10 max-w-2xl text-lg leading-normal md:mb-14 md:text-xl">
+					{t("profile")}
+				</p>
+				<div className="border-ink border-t">
+					<article className="border-line grid grid-cols-12 gap-2 border-b py-7.5 md:gap-6">
+						<span className="text-muted col-span-12 font-mono text-xs md:col-span-2 md:pt-1">
+							2026
+						</span>
+						<div className="col-span-11 min-w-0 md:col-span-9">
+							<h2 className="font-display text-xl font-semibold md:text-2xl">{t("cynaFull")}</h2>
+							<p className="text-teal mt-1 mb-5 font-mono text-xs">{t("cynaFullMeta")}</p>
+							<p className="text-muted max-w-3xl text-sm">{t("cynaFullIntro")}</p>
+							<ul className="text-muted mt-5 list-disc pl-5 text-sm leading-relaxed">
 								<li>
 									{language === "fr"
 										? "Automatisation du support par agents IA Mastra : analyse du ticket, choix de l'action et contrôle des droits."
@@ -104,15 +120,17 @@ const Main = () => {
 								</li>
 							</ul>
 						</div>
-						<span className="row-arrow">↗</span>
+						<span className="text-teal col-span-1 text-2xl">↗</span>
 					</article>
-					<article className="experience-row">
-						<span className="experience-date">2024 — 2026</span>
-						<div>
-							<h2>{t("cynaDevops")}</h2>
-							<p className="experience-meta">{t("cynaDevopsMeta")}</p>
-							<p>{t("cynaDevopsIntro")}</p>
-							<ul>
+					<article className="border-line grid grid-cols-12 gap-2 border-b py-7.5 md:gap-6">
+						<span className="text-muted col-span-12 font-mono text-xs md:col-span-2 md:pt-1">
+							2024 — 2026
+						</span>
+						<div className="col-span-11 min-w-0 md:col-span-9">
+							<h2 className="font-display text-xl font-semibold md:text-2xl">{t("cynaDevops")}</h2>
+							<p className="text-teal mt-1 mb-5 font-mono text-xs">{t("cynaDevopsMeta")}</p>
+							<p className="text-muted max-w-3xl text-sm">{t("cynaDevopsIntro")}</p>
+							<ul className="text-muted mt-5 list-disc pl-5 text-sm leading-relaxed">
 								<li>
 									{language === "fr"
 										? "Déploiement automatisé de services internes avec Docker et Kubernetes."
@@ -130,15 +148,17 @@ const Main = () => {
 								</li>
 							</ul>
 						</div>
-						<span className="row-arrow">↗</span>
+						<span className="text-teal col-span-1 text-2xl">↗</span>
 					</article>
-					<article className="experience-row">
-						<span className="experience-date">2023 — 2024</span>
-						<div>
-							<h2>{t("jproject")}</h2>
-							<p className="experience-meta">{t("jprojectMeta")}</p>
-							<p>{t("jprojectIntro")}</p>
-							<ul>
+					<article className="border-line grid grid-cols-12 gap-2 border-b py-7.5 md:gap-6">
+						<span className="text-muted col-span-12 font-mono text-xs md:col-span-2 md:pt-1">
+							2023 — 2024
+						</span>
+						<div className="col-span-11 min-w-0 md:col-span-9">
+							<h2 className="font-display text-xl font-semibold md:text-2xl">{t("jproject")}</h2>
+							<p className="text-teal mt-1 mb-5 font-mono text-xs">{t("jprojectMeta")}</p>
+							<p className="text-muted max-w-3xl text-sm">{t("jprojectIntro")}</p>
+							<ul className="text-muted mt-5 list-disc pl-5 text-sm leading-relaxed">
 								<li>
 									{language === "fr"
 										? "Plateforme Nuxt.js / Django, puis migration du frontend vers Next.js."
@@ -156,31 +176,33 @@ const Main = () => {
 								</li>
 							</ul>
 						</div>
-						<span className="row-arrow">↗</span>
+						<span className="text-teal col-span-1 text-2xl">↗</span>
 					</article>
 				</div>
 			</section>
 
-			<section className="projects-section" id="profile">
-				<div className="section-heading">
-					<p className="eyebrow">02 / {t("projects")}</p>
-					<span className="section-rule" />
+			<section className="border-line border-b py-16 md:py-24" id="profile">
+				<div className="mb-10 flex items-center gap-6">
+					<p className="text-teal font-mono text-xs font-medium tracking-wide whitespace-nowrap uppercase">
+						02 / {t("projects")}
+					</p>
+					<span className="bg-line h-px w-full" />
 				</div>
-				<div className="project-notes">
-					<article>
-						<div className="project-number">01</div>
-						<h2>{t("pipeline")}</h2>
-						<p className="project-meta-line">{t("pipelineMeta")}</p>
-						<p>{t("pipelineText")}</p>
+				<div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
+					<article className="border-ink border-t pt-4">
+						<div className="text-teal mb-8 font-mono text-xs">01</div>
+						<h2 className="font-display text-3xl font-semibold">{t("pipeline")}</h2>
+						<p className="text-teal my-2 mb-5 font-mono text-xs">{t("pipelineMeta")}</p>
+						<p className="text-muted max-w-lg leading-relaxed">{t("pipelineText")}</p>
 					</article>
-					<article>
-						<div className="project-number">02</div>
-						<h2>{t("shop")}</h2>
-						<p className="project-meta-line">{t("shopText")}</p>
-						<p>
+					<article className="border-ink border-t pt-4">
+						<div className="text-teal mb-8 font-mono text-xs">02</div>
+						<h2 className="font-display text-3xl font-semibold">{t("shop")}</h2>
+						<p className="text-teal my-2 mb-5 font-mono text-xs">{t("shopText")}</p>
+						<p className="text-muted max-w-lg leading-relaxed">
 							{t("shopText")}
 							<a href="https://github.com/KrispyTech/airneis" target="_blank" rel="noreferrer">
-								GitHub ↗
+								<span className="text-teal">GitHub ↗</span>
 							</a>
 						</p>
 					</article>

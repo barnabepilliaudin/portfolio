@@ -17,10 +17,12 @@
 		"fix-code": "oxfmt && oxlint --fix && pnpm run typecheck"
 	},
 	"dependencies": {
+		"@tailwindcss/vite": "^4.3.3",
 		"jotai": "^2.20.3",
 		"react": "^19.2.8",
 		"react-dom": "^19.2.8",
-		"remeda": "^2.45.0"
+		"remeda": "^2.45.0",
+		"tailwindcss": "^4.3.3"
 	},
 	"devDependencies": {
 		"@types/node": "^24.13.3",
