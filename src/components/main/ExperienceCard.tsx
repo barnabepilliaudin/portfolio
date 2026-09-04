@@ -1,9 +1,8 @@
+import type { Experience } from "@content/experiences"
+import useLanguage from "@hooks/useLanguage"
 import type { ReactNode } from "react"
 import { map } from "remeda"
 import { twMerge } from "tailwind-merge"
-
-import type { Experience } from "../../content/experiences"
-import useLanguage from "../../hooks/useLanguage"
 
 type ExperienceCardProps = {
 	experience: Experience

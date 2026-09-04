@@ -1,5 +1,5 @@
-import useLanguage from "../../hooks/useLanguage"
-import Console from "./Console"
+import Console from "@components/main/Console"
+import useLanguage from "@hooks/useLanguage"
 
 const MySelf = () => {
 	const { t } = useLanguage()

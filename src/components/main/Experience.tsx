@@ -1,8 +1,8 @@
+import ExperienceCard from "@components/main/ExperienceCard"
+import useLanguage from "@hooks/useLanguage"
 import { map } from "remeda"
 
-import experiences from "../../content/experiences"
-import useLanguage from "../../hooks/useLanguage"
-import ExperienceCard from "./ExperienceCard"
+import experiences from "@/content/experiences"
 
 const Experience = () => {
 	const { t } = useLanguage()

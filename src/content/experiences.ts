@@ -1,4 +1,4 @@
-import type { LocaleKey } from "../locales/Locale.type"
+import type { LocaleKey } from "@locales/Locale.type"
 
 export type Experience = {
 	name: LocaleKey

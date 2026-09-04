@@ -1,4 +1,4 @@
-import useLanguage from "../hooks/useLanguage"
+import useLanguage from "@hooks/useLanguage"
 
 const Footer = () => {
 	const { t } = useLanguage()

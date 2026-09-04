@@ -1,6 +1,6 @@
-import Experience from "./main/Experience"
-import Intro from "./main/Intro"
-import Projects from "./main/Projects"
+import Experience from "@components/main/Experience"
+import Intro from "@components/main/Intro"
+import Projects from "@components/main/Projects"
 
 const Main = () => {
 	return (

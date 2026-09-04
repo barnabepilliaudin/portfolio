@@ -1,5 +1,5 @@
-import useMenu from "../hooks/useMenu"
-import Navbar from "./header/Navbar"
+import Navbar from "@components/header/Navbar"
+import useMenu from "@hooks/useMenu"
 
 const Header = () => {
 	const { isMenuOpen, setIsMenuOpen } = useMenu()

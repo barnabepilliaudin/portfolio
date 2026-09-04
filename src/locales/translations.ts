@@ -1,5 +1,7 @@
-import enLocale from "./en"
-import frLocale from "./fr"
+import enLocale from "@locales/en"
+
+import frLocale from "@/locales/fr"
+
 import type { Language, Locale, LocaleKey } from "./Locale.type"
 
 const translations: Record<Language, Locale> = {

@@ -1,8 +1,7 @@
+import type { Project } from "@content/projects"
+import useLanguage from "@hooks/useLanguage"
 import type { ReactNode } from "react"
 import { twMerge } from "tailwind-merge"
-
-import type { Project } from "../../content/projects"
-import useLanguage from "../../hooks/useLanguage"
 
 type TextProps = {
 	className?: string

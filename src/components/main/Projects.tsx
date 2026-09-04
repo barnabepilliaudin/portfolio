@@ -1,8 +1,7 @@
+import ProjectCard from "@components/main/ProjectCard"
+import { projects } from "@content/projects"
+import useLanguage from "@hooks/useLanguage"
 import { map } from "remeda"
-
-import { projects } from "../../content/projects"
-import useLanguage from "../../hooks/useLanguage"
-import ProjectCard from "./ProjectCard"
 
 const Projects = () => {
 	const { t } = useLanguage()

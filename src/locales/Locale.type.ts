@@ -1,4 +1,4 @@
-import type enLocale from "./en"
+import type enLocale from "@locales/en"
 
 export type Locale = typeof enLocale
 export type LocaleKey = keyof Locale

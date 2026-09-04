@@ -1,7 +1,6 @@
+import useLanguage from "@hooks/useLanguage"
+import useMenu from "@hooks/useMenu"
 import { map } from "remeda"
-
-import useLanguage from "../../hooks/useLanguage"
-import useMenu from "../../hooks/useMenu"
 
 type NavbarItemProps = {
 	onClick: () => void
