@@ -44,7 +44,7 @@ const Navbar = () => {
 			label: language === "en" ? "FR" : "EN",
 			"aria-label": "Change language",
 			className:
-				"border-line w-full cursor-pointer appearance-none border-0 border-b bg-transparent px-0 py-3 text-left font-mono text-xs font-medium text-ink md:w-auto md:border md:px-2 md:py-1.5 md:text-center",
+				"border-line max-w-8 text-center cursor-pointer appearance-none border font-mono text-xs font-medium text-ink md:px-2 md:py-1.5",
 			onClick: handleChangeLanguage,
 		},
 		{
