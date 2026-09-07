@@ -56,7 +56,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 	return (
 		<article className="border-line grid grid-cols-12 gap-2 border-b py-7.5 md:gap-6">
 			<ExperiencePeriod>{period}</ExperiencePeriod>
-			<div className="col-span-11 min-w-0 md:col-span-9">
+			<div className="col-span-11 flex min-w-0 flex-col gap-2 md:col-span-9">
 				<ExperienceName>{t(name)}</ExperienceName>
 				<ExperienceMeta>{t(meta)}</ExperienceMeta>
 				<ExperienceDescription>{t(description)}</ExperienceDescription>
@@ -66,7 +66,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 					))}
 				</ul>
 			</div>
-			<span className="text-teal col-span-1 text-2xl">↗</span>
+			<span className="text-teal col-span-1 hidden text-2xl md:visible">↗</span>
 		</article>
 	)
 }

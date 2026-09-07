@@ -8,7 +8,7 @@ const Projects = () => {
 
 	return (
 		<section
-			className="border-line border-b py-16 md:py-24"
+			className="border-line border-b py-4 md:py-6"
 			id="profile"
 		>
 			<div className="mb-10 flex items-center gap-6">

@@ -9,7 +9,7 @@ const Experience = () => {
 
 	return (
 		<section
-			className="py-8 md:py-25"
+			className="py-1.5 md:py-6.25"
 			id="experience"
 		>
 			<div className="mb-10 flex items-center gap-6">

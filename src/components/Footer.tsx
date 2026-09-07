@@ -6,7 +6,7 @@ import { GIT_PLATFORMS } from "@/utils/git"
 
 const EmailButton = () => (
 	<a
-		className="border-ink font-display mt-6 mb-20 inline-block max-w-full border-b-2 text-3xl font-semibold tracking-tight md:mb-30 md:text-6xl"
+		className="border-ink font-display mb-10 inline-block max-w-full border-b-2 text-xl font-semibold tracking-tight md:text-3xl lg:mb-30 lg:text-6xl"
 		href={`mailto:${PERSONAL_INFO.email}`}
 	>
 		{PERSONAL_INFO.email} <span className="text-teal">↗</span>
@@ -18,7 +18,7 @@ const GitLinks = () => (
 		{map(keys(GIT_PLATFORMS), (platform) => (
 			<a
 				key={platform}
-				className="text-ink"
+				className="text-s"
 				href={PERSONAL_INFO.gitLinks[platform]}
 				target="_blank"
 				rel="noreferrer"
@@ -32,10 +32,10 @@ const GitLinks = () => (
 const Footer = () => {
 	const { t } = useLanguage()
 	return (
-		<footer className="mx-auto max-w-7xl px-5 pt-18 pb-0 md:px-10 md:pt-28">
+		<footer className="mx-auto max-w-7xl px-5 py-6 md:px-10 md:pt-16">
 			<p className="text-teal font-mono text-sm font-medium">{t("contact")}</p>
 			<EmailButton />
-			<div className="border-line text-muted flex flex-wrap justify-between gap-3 border-t py-5 pb-8 font-mono text-xs">
+			<div className="border-line text-teal flex flex-wrap items-center justify-between gap-3 border-t py-5 pb-8 font-mono text-xs">
 				<span>
 					© {new Date().getFullYear()}
 					{` . ${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName}`}

@@ -8,6 +8,8 @@ type TextProps = {
 	children: ReactNode
 }
 
+const formatId = (id: number) => id.toString().padStart(2, "0")
+
 const ProjectText = ({ className, children }: TextProps) => (
 	<p className={twMerge("text-muted max-w-lg leading-relaxed", className)}>
 		{children}
@@ -38,7 +40,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 	const { t } = useLanguage()
 	return (
 		<article className="border-ink border-t pt-4">
-			<div className="text-teal mb-8 font-mono text-xs">{id}</div>
+			<div className="text-teal mb-8 font-mono text-xs">{formatId(id)}</div>
 			<ProjectTitle>{t(name)}</ProjectTitle>
 			<ProjectMeta>{t(meta)}</ProjectMeta>
 			<ProjectText>{t(description)}</ProjectText>

@@ -37,7 +37,7 @@ const Toolchain = () => (
 
 const Console = () => (
 	<div
-		className="bg-navy shadow-console mt-2.5 mb-20 w-full text-slate-100 md:mt-0 md:mb-0 md:ml-auto md:w-96"
+		className="bg-navy shadow-console mx-auto mt-2.5 mb-20 w-full max-w-96 text-slate-100 max-[450px]:shadow-none md:mt-0 md:mb-0 md:ml-auto"
 		aria-label="Technology overview"
 	>
 		<div className="flex items-center gap-1 border-b border-slate-600 px-4 py-3 font-mono text-xs text-slate-400">
@@ -45,9 +45,7 @@ const Console = () => (
 			<span className="h-2 w-2 rounded-full bg-[#e06b5f]" />
 			<span className="h-2 w-2 rounded-full bg-[#e5be62]" />
 			<span className="h-2 w-2 rounded-full bg-[#76b99c]" />
-			<b className="ml-auto font-normal">
-				{PERSONAL_INFO.firstName}.dev / stack
-			</b>
+			<b className="ml-auto font-normal">barnabe.dev</b>
 		</div>
 		<div className="px-6 py-7 pb-6 font-mono text-sm leading-loose">
 			<p>
