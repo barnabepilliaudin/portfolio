@@ -21,7 +21,7 @@ const Projects = () => {
 				{map(projects, (project, id) => (
 					<ProjectCard
 						project={project}
-						id={++id}
+						id={id + 1}
 						key={`project-${project.name}-${id}`}
 					/>
 				))}

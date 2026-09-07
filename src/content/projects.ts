@@ -1,6 +1,5 @@
 import type { LocaleKey } from "@locales/Locale.type"
-import type { GitPlatform } from "@utils/git"
-import { GIT_PLATFORMS } from "@utils/git"
+import { GIT_PLATFORMS, type GitPlatform } from "@utils/git"
 import type { Url } from "@utils/validators"
 
 export type Project = {

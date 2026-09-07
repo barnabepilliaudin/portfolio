@@ -60,6 +60,9 @@ importers:
       oxlint:
         specifier: ^1.79.0
         version: 1.80.0
+      oxlint-plugin-eslint:
+        specifier: ^1.81.0
+        version: 1.81.0
       tailwind-lint:
         specifier: ^0.12.1
         version: 0.12.1
@@ -1154,6 +1157,10 @@ packages:
       vite-plus:
         optional: true
 
+  oxlint-plugin-eslint@1.81.0:
+    resolution: {integrity: sha512-rP192UkflmY1cAubbqlGccVRGpyK3MMSzZhN2V5njKzbNJW+KmJE/9JjJaVl9mQPq686xZ2Zc0xFcUAiP8oIMw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+
   oxlint@1.80.0:
     resolution: {integrity: sha512-5nTiSps4qdbCWLbxzuO00alHkEO2exR9YMN/ig6QXWrLsYSG0KaObOAM+l6oU2LcKPWoSAGYbkZIGEu1ViiWKA==}
     engines: {node: ^20.19.0 || >=22.12.0}
@@ -2181,6 +2188,8 @@ snapshots:
       '@oxfmt/binding-win32-arm64-msvc': 0.65.0
       '@oxfmt/binding-win32-ia32-msvc': 0.65.0
       '@oxfmt/binding-win32-x64-msvc': 0.65.0
+
+  oxlint-plugin-eslint@1.81.0: {}
 
   oxlint@1.80.0:
     optionalDependencies:

@@ -15,8 +15,8 @@ const EmailButton = () => (
 
 const GitLinks = () => (
 	<>
-		{map(keys(GIT_PLATFORMS), (platform) => {
-			;<a
+		{map(keys(GIT_PLATFORMS), (platform) => (
+			<a
 				className="text-ink"
 				href={PERSONAL_INFO.gitLinks[platform]}
 				target="_blank"
@@ -24,7 +24,7 @@ const GitLinks = () => (
 			>
 				{platform} ↗
 			</a>
-		})}
+		))}
 	</>
 )
 
