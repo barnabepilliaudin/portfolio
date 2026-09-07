@@ -1,10 +1,11 @@
 const Stack = () => (
 	<>
 		<p className="pl-6">
-			stack: [<strong>'TypeScript'</strong>,
+			stack: [<strong className="text-lime font-normal">'TypeScript'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong>'Golang'</strong>, <strong>'Node.js'</strong>],
+			<strong className="text-lime font-normal">'Golang'</strong>,{" "}
+			<strong className="text-lime font-normal">'Node.js'</strong>],
 		</p>
 	</>
 )
@@ -12,19 +13,22 @@ const Stack = () => (
 const Toolchain = () => (
 	<>
 		<p className="pl-6">
-			toolchain: [<strong>'Hono'</strong>,
+			toolchain: [<strong className="text-lime font-normal">'Hono'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong>'Kysely'</strong>, <strong>'Remeda'</strong>,
+			<strong className="text-lime font-normal">'Kysely'</strong>,{" "}
+			<strong className="text-lime font-normal">'Remeda'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong>'pnpm'</strong>, <strong>'Fiber'</strong>,
+			<strong className="text-lime font-normal">'pnpm'</strong>,{" "}
+			<strong className="text-lime font-normal">'Fiber'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong>'GORM'</strong>, <strong>'oxlint'</strong>,
+			<strong className="text-lime font-normal">'GORM'</strong>,{" "}
+			<strong className="text-lime font-normal">'oxlint'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong>'golint'</strong>],
+			<strong className="text-lime font-normal">'golint'</strong>],
 		</p>
 	</>
 )
@@ -41,17 +45,17 @@ const Console = () => (
 			<span className="h-2 w-2 rounded-full bg-[#76b99c]" />
 			<b className="ml-auto font-normal">barnabe.dev / stack</b>
 		</div>
-		<div className="[&_strong]:text-lime px-6 py-7 pb-6 font-mono text-sm leading-loose [&_i]:text-fuchsia-300 [&_i]:not-italic [&_strong]:font-normal">
+		<div className="px-6 py-7 pb-6 font-mono text-sm leading-loose">
 			<p>
-				<i>const</i> developer = &#123;
+				<i className="text-fuchsia-300 not-italic">const</i> developer = &#123;
 			</p>
 			<p className="pl-6">
-				name: <strong>'Barnabé'</strong>,
+				name: <strong className="text-lime font-normal">'Barnabé'</strong>,
 			</p>
 			<Stack />
 			<Toolchain />
 			<p className="pl-6">
-				ships: <strong>true</strong>
+				ships: <strong className="text-lime font-normal">true</strong>
 			</p>
 			<p>&#125;</p>
 			<p className="text-teal mt-3">▮</p>

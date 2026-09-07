@@ -2,6 +2,8 @@ import useLanguage from "@hooks/useLanguage"
 import useMenu from "@hooks/useMenu"
 import { map } from "remeda"
 
+import { ROUTES } from "@/constants"
+
 type NavbarItemProps = {
 	onClick: () => void
 	children: React.ReactNode
@@ -34,7 +36,7 @@ const Navbar = () => {
 		},
 		{
 			label: t("resume"),
-			href: language === "en" ? "/resume-en.html" : "/resume.html",
+			href: ROUTES.resume,
 			onClick: handleSetIsOpenMenu(false),
 		},
 		{

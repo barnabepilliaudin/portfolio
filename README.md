@@ -14,7 +14,7 @@ Open `http://localhost:5173/` in your browser.
 ## Pages
 
 - `/` — portfolio homepage with English/French language switch
-- `/resume.html` — public resume page
+- `/resume` — public resume page using the selected language
 - `/CV_PILLIAUDIN_BARNABE.pdf` — downloadable CV PDF
 
 ## Build

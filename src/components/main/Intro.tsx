@@ -1,6 +1,8 @@
 import Console from "@components/main/Console"
 import useLanguage from "@hooks/useLanguage"
 
+import { ROUTES } from "@/constants"
+
 const MySelf = () => {
 	const { t } = useLanguage()
 	return (
@@ -20,7 +22,7 @@ const MySelf = () => {
 }
 
 const CTASection = () => {
-	const { t, language } = useLanguage()
+	const { t } = useLanguage()
 	return (
 		<div className="mt-7 flex items-center gap-3.5 md:mt-9 md:gap-7">
 			<a
@@ -32,7 +34,7 @@ const CTASection = () => {
 			</a>
 			<a
 				className="border-ink inline-flex flex-1 items-center justify-between gap-6 border px-3.5 py-3.5 text-xs font-bold md:flex-none md:px-4.5 md:py-4"
-				href={language === "en" ? "/resume-en.html" : "/resume.html"}
+				href={ROUTES.resume}
 			>
 				<span>{t("viewResume")}</span> <span className="text-teal text-base">↗</span>
 			</a>
