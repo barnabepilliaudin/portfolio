@@ -206,7 +206,7 @@ const ResumeProjects = () => {
 						<p key={project.name}>
 							<b>{t(project.name)}</b> · {t(project.meta)}
 							<br />
-							{t(project.description)}{" "}
+							{t(project.description)}
 							<a
 								className="text-teal"
 								href={project.link.url}

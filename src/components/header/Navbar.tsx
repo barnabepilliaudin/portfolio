@@ -2,7 +2,7 @@ import useLanguage from "@hooks/useLanguage"
 import useMenu from "@hooks/useMenu"
 import { map } from "remeda"
 
-import { ROUTES } from "@/constants"
+import { PERSONAL_INFO, ROUTES } from "@/constants"
 
 type NavbarItemProps = {
 	"onClick": () => void
@@ -52,7 +52,7 @@ const Navbar = () => {
 		},
 		{
 			label: t("talk"),
-			href: "mailto:contact@barnabepilliaudin.fr",
+			href: PERSONAL_INFO.email,
 			className: "border-b border-ink pb-1 max-md:border-b-0",
 			onClick: handleSetIsOpenMenu(false),
 		},

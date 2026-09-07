@@ -1,10 +1,12 @@
+import { PERSONAL_INFO } from "@/constants"
+
 const Stack = () => (
 	<>
 		<p className="pl-6">
 			stack: [<strong className="text-lime font-normal">'TypeScript'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong className="text-lime font-normal">'Golang'</strong>,{" "}
+			<strong className="text-lime font-normal">'Golang'</strong>,
 			<strong className="text-lime font-normal">'Node.js'</strong>],
 		</p>
 	</>
@@ -16,15 +18,15 @@ const Toolchain = () => (
 			toolchain: [<strong className="text-lime font-normal">'Hono'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong className="text-lime font-normal">'Kysely'</strong>,{" "}
+			<strong className="text-lime font-normal">'Kysely'</strong>,
 			<strong className="text-lime font-normal">'Remeda'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong className="text-lime font-normal">'pnpm'</strong>,{" "}
+			<strong className="text-lime font-normal">'pnpm'</strong>,
 			<strong className="text-lime font-normal">'Fiber'</strong>,
 		</p>
 		<p className="pl-12">
-			<strong className="text-lime font-normal">'GORM'</strong>,{" "}
+			<strong className="text-lime font-normal">'GORM'</strong>,
 			<strong className="text-lime font-normal">'oxlint'</strong>,
 		</p>
 		<p className="pl-12">
@@ -43,14 +45,20 @@ const Console = () => (
 			<span className="h-2 w-2 rounded-full bg-[#e06b5f]" />
 			<span className="h-2 w-2 rounded-full bg-[#e5be62]" />
 			<span className="h-2 w-2 rounded-full bg-[#76b99c]" />
-			<b className="ml-auto font-normal">barnabe.dev / stack</b>
+			<b className="ml-auto font-normal">
+				{PERSONAL_INFO.firstName}.dev / stack
+			</b>
 		</div>
 		<div className="px-6 py-7 pb-6 font-mono text-sm leading-loose">
 			<p>
 				<i className="text-fuchsia-300 not-italic">const</i> developer = &#123;
 			</p>
 			<p className="pl-6">
-				name: <strong className="text-lime font-normal">'Barnabé'</strong>,
+				name:{" "}
+				<strong className="text-lime font-normal">
+					'{PERSONAL_INFO.firstName}'
+				</strong>
+				,
 			</p>
 			<Stack />
 			<Toolchain />

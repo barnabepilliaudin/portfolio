@@ -8,7 +8,7 @@ const MySelf = () => {
 	return (
 		<>
 			<p className="text-teal font-mono text-xs font-medium tracking-wide uppercase">
-				<span className="bg-teal shadow-status mr-2 inline-block h-2 w-2 rounded-full align-middle" />{" "}
+				<span className="bg-teal shadow-status mr-2 inline-block h-2 w-2 rounded-full align-middle" />
 				{t("available")}
 			</p>
 			<h1 className="font-display my-5 max-w-3xl text-6xl leading-none font-semibold tracking-tighter md:my-7 md:mb-6 md:text-8xl">
@@ -31,7 +31,7 @@ const CTASection = () => {
 				className="bg-ink inline-flex flex-1 items-center justify-between gap-6 px-3.5 py-3.5 text-xs font-bold text-white md:flex-none md:px-4.5 md:py-4"
 				href="#experience"
 			>
-				<span className="text-white">{t("seeWork")}</span>{" "}
+				<span className="text-white">{t("seeWork")}</span>
 				<span className="text-lime text-base">↓</span>
 			</a>
 			<a
