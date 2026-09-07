@@ -23,7 +23,10 @@ const Experience = () => {
 			</p>
 			<div className="border-ink border-t">
 				{map(experiences, (experience) => (
-					<ExperienceCard experience={experience} />
+					<ExperienceCard
+						key={experience.name}
+						experience={experience}
+					/>
 				))}
 			</div>
 		</section>

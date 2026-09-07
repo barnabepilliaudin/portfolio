@@ -62,7 +62,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 				<ExperienceDescription>{t(description)}</ExperienceDescription>
 				<ul className="text-muted mt-5 list-disc pl-5 text-sm leading-relaxed">
 					{map(tasks, (task) => (
-						<li>{t(task)}</li>
+						<li key={task}>{t(task)}</li>
 					))}
 				</ul>
 			</div>

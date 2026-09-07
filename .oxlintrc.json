@@ -23,7 +23,7 @@
 				"allowVoid": true
 			}
 		],
-
+		"react/jsx-key": "error",
 		"no-await-in-loop": "error",
 		"no-constant-binary-expression": "error",
 		"no-constructor-return": "error",

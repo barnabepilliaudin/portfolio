@@ -17,6 +17,7 @@ const GitLinks = () => (
 	<>
 		{map(keys(GIT_PLATFORMS), (platform) => (
 			<a
+				key={platform}
 				className="text-ink"
 				href={PERSONAL_INFO.gitLinks[platform]}
 				target="_blank"
