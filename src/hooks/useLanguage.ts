@@ -5,7 +5,10 @@ import { atomWithStorage } from "jotai/utils"
 
 import { LANGUAGE_STORAGE_KEY } from "@/constants"
 
-const languageAtom = atomWithStorage<Language>(LANGUAGE_STORAGE_KEY, LANGUAGES.en)
+const languageAtom = atomWithStorage<Language>(
+	LANGUAGE_STORAGE_KEY,
+	LANGUAGES.en,
+)
 
 const useLanguage = () => {
 	const [language, setLanguage] = useAtom(languageAtom)

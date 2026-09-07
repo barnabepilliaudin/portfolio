@@ -1,6 +1,7 @@
 # Barnabé Pilliaudin Portfolio
 
-Personal portfolio and public resume for Barnabé Pilliaudin, Full Stack Developer.
+Hi I'm Barnabé Pilliaudin, a software engineer and full stack developer. This is
+my personal portfolio website showcasing my work, skills, and experience.
 
 ## Run locally
 

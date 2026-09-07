@@ -36,7 +36,8 @@ const Footer = () => {
 			<EmailButton />
 			<div className="border-line text-muted flex flex-wrap justify-between gap-3 border-t py-5 pb-8 font-mono text-xs">
 				<span>
-					© {new Date().getFullYear()} {`${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName}`}
+					© {new Date().getFullYear()}
+					{` . ${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName}`}
 				</span>
 				<span>{t("footer")}</span>
 				<span className="flex gap-4">

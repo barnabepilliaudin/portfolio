@@ -8,7 +8,10 @@ const Experience = () => {
 	const { t } = useLanguage()
 
 	return (
-		<section className="py-8 md:py-25" id="experience">
+		<section
+			className="py-8 md:py-25"
+			id="experience"
+		>
 			<div className="mb-10 flex items-center gap-6">
 				<p className="text-teal font-mono text-xs font-medium tracking-wide whitespace-nowrap uppercase">
 					01 / {t("experience")}

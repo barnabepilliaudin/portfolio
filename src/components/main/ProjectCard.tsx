@@ -9,19 +9,22 @@ type TextProps = {
 }
 
 const ProjectText = ({ className, children }: TextProps) => (
-	<p className={twMerge("text-muted max-w-lg leading-relaxed", className)}>{children}</p>
+	<p className={twMerge("text-muted max-w-lg leading-relaxed", className)}>
+		{children}
+	</p>
 )
 const ProjectMeta = ({ className, children }: TextProps) => (
-	<p className={twMerge("text-teal my-2 mb-5 font-mono text-xs", className)}>{children}</p>
+	<p className={twMerge("text-teal my-2 mb-5 font-mono text-xs", className)}>
+		{children}
+	</p>
 )
 const ProjectTitle = ({ className, children }: TextProps) => (
-	<p className={twMerge("font-display text-3xl font-semibold", className)}>{children}</p>
+	<p className={twMerge("font-display text-3xl font-semibold", className)}>
+		{children}
+	</p>
 )
 
-type ProjectCardProps = {
-	project: Project
-	id: number
-}
+type ProjectCardProps = { project: Project; id: number }
 const ProjectCard = (props: ProjectCardProps) => {
 	const {
 		project: {
@@ -40,7 +43,11 @@ const ProjectCard = (props: ProjectCardProps) => {
 			<ProjectMeta>{t(meta)}</ProjectMeta>
 			<ProjectText>{t(description)}</ProjectText>
 			<ProjectText>
-				<a href={url} target="_blank" rel="noreferrer">
+				<a
+					href={url}
+					target="_blank"
+					rel="noreferrer"
+				>
 					<span className="text-teal">{platform} ↗</span>
 				</a>
 			</ProjectText>

@@ -8,4 +8,5 @@ const translations: Record<Language, Locale> = {
 	fr: frLocale,
 }
 
-export const translate = (language: Language) => (key: LocaleKey) => translations[language][key]
+export const translate = (language: Language) => (key: LocaleKey) =>
+	translations[language][key]

@@ -15,21 +15,36 @@ type ExperienceCardTextProps = {
 
 const ExperiencePeriod = ({ className, children }: ExperienceCardTextProps) => (
 	<span
-		className={twMerge("text-muted col-span-12 font-mono text-xs md:col-span-2 md:pt-1", className)}
+		className={twMerge(
+			"text-muted col-span-12 font-mono text-xs md:col-span-2 md:pt-1",
+			className,
+		)}
 	>
 		{children}
 	</span>
 )
 const ExperienceName = ({ className, children }: ExperienceCardTextProps) => (
-	<h2 className={twMerge("font-display text-xl font-semibold md:text-2xl", className)}>
+	<h2
+		className={twMerge(
+			"font-display text-xl font-semibold md:text-2xl",
+			className,
+		)}
+	>
 		{children}
 	</h2>
 )
 const ExperienceMeta = ({ className, children }: ExperienceCardTextProps) => (
-	<p className={twMerge("text-teal mt-1 mb-5 font-mono text-xs", className)}>{children}</p>
+	<p className={twMerge("text-teal mt-1 mb-5 font-mono text-xs", className)}>
+		{children}
+	</p>
 )
-const ExperienceDescription = ({ className, children }: ExperienceCardTextProps) => (
-	<p className={twMerge("text-muted max-w-3xl text-sm", className)}>{children}</p>
+const ExperienceDescription = ({
+	className,
+	children,
+}: ExperienceCardTextProps) => (
+	<p className={twMerge("text-muted max-w-3xl text-sm", className)}>
+		{children}
+	</p>
 )
 
 const ExperienceCard = (props: ExperienceCardProps) => {
@@ -44,7 +59,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
 			<div className="col-span-11 min-w-0 md:col-span-9">
 				<ExperienceName>{t(name)}</ExperienceName>
 				<ExperienceMeta>{t(meta)}</ExperienceMeta>
-				<ExperienceDescription className="">{t(description)}</ExperienceDescription>
+				<ExperienceDescription>{t(description)}</ExperienceDescription>
 				<ul className="text-muted mt-5 list-disc pl-5 text-sm leading-relaxed">
 					{map(tasks, (task) => (
 						<li>{t(task)}</li>

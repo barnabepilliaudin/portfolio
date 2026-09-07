@@ -1,5 +1,9 @@
 import Resume from "@components/Resume"
-import { createRootRoute, createRoute, createRouter } from "@tanstack/react-router"
+import {
+	createRootRoute,
+	createRoute,
+	createRouter,
+} from "@tanstack/react-router"
 
 import App from "@/App"
 import { ROUTES } from "@/constants"

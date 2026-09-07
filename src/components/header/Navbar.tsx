@@ -5,23 +5,25 @@ import { map } from "remeda"
 import { ROUTES } from "@/constants"
 
 type NavbarItemProps = {
-	onClick: () => void
-	children: React.ReactNode
-	href?: string
-	as?: string
-	type?: string
+	"onClick": () => void
+	"children": React.ReactNode
+	"href"?: string
+	"as"?: string
+	"type"?: string
 	"aria-label"?: string
-	className?: string
+	"className"?: string
 }
-const NavbarItem = ({ as: Component = "a", ...otherProps }: NavbarItemProps) => (
-	<Component {...otherProps} />
-)
+const NavbarItem = ({
+	as: Component = "a",
+	...otherProps
+}: NavbarItemProps) => <Component {...otherProps} />
 
 const Navbar = () => {
 	const { t, language, setLanguage } = useLanguage()
 	const { isMenuOpen, setIsMenuOpen } = useMenu()
 	const handleSetIsOpenMenu = (value: boolean) => () => setIsMenuOpen(value)
-	const handleChangeLanguage = () => setLanguage(language === "en" ? "fr" : "en")
+	const handleChangeLanguage = () =>
+		setLanguage(language === "en" ? "fr" : "en")
 
 	const navbarItems = [
 		{
@@ -40,13 +42,13 @@ const Navbar = () => {
 			onClick: handleSetIsOpenMenu(false),
 		},
 		{
-			as: "button",
-			type: "button",
-			label: language === "en" ? "FR" : "EN",
+			"as": "button",
+			"type": "button",
+			"label": language === "en" ? "FR" : "EN",
 			"aria-label": "Change language",
-			className:
+			"className":
 				"border-line max-w-8 text-center cursor-pointer appearance-none border font-mono text-xs font-medium text-ink md:px-2 md:py-1.5",
-			onClick: handleChangeLanguage,
+			"onClick": handleChangeLanguage,
 		},
 		{
 			label: t("talk"),

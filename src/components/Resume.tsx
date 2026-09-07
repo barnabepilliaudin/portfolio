@@ -21,15 +21,15 @@ const educationItems: [string, LocaleKey, LocaleKey][] = [
 	["2021 — 2023", "resumePreparatory", "resumeSupDeVinci"],
 ]
 
-type ResumeSectionItem = {
-	title?: string
-	content: React.ReactNode
-}
+type ResumeSectionItem = { title?: string; content: React.ReactNode }
 
 const ResumeSection = ({ sections }: { sections: ResumeSectionItem[] }) => (
 	<>
 		{sections.map(({ title, content }, index) => (
-			<section className="mb-7 space-y-3.5" key={title ?? index}>
+			<section
+				className="mb-7 space-y-3.5"
+				key={`${title}-${index}`}
+			>
 				{title && (
 					<h2 className="border-line text-teal border-b pb-2.5 text-[13px] font-bold tracking-[2px] uppercase">
 						{title}
@@ -59,7 +59,10 @@ const ResumeActions = () => {
 				onChange={(event) => setLanguage(event.target.value as Language)}
 			>
 				{map(values(LANGUAGES), (option) => (
-					<option key={option} value={option}>
+					<option
+						key={option}
+						value={option}
+					>
 						{option.toUpperCase()}
 					</option>
 				))}
@@ -83,23 +86,38 @@ const ResumeHeader = () => {
 			<h1 className="m-0 text-[44px] tracking-[-2px] max-[700px]:text-4xl">
 				{PERSONAL_INFO.firstName} {PERSONAL_INFO.lastName}
 			</h1>
-			<p className="text-teal my-2 mb-3 font-bold tracking-[3px] uppercase">{t("resumeRole")}</p>
+			<p className="text-teal my-2 mb-3 font-bold tracking-[3px] uppercase">
+				{t("resumeRole")}
+			</p>
 			<p className="text-muted">
-				{PERSONAL_INFO.city} ({PERSONAL_INFO.zipCode}), {PERSONAL_INFO.country} <br />
+				{PERSONAL_INFO.city} ({PERSONAL_INFO.zipCode}), {PERSONAL_INFO.country}
+				<br />
 				<div className="flex gap-2">
-					<a className="text-teal!" href={`mailto:${PERSONAL_INFO.email}`}>
+					<a
+						className="text-teal!"
+						href={`mailto:${PERSONAL_INFO.email}`}
+					>
 						Email
 					</a>
 					.
-					<a className="text-teal!" href={PERSONAL_INFO.linkedIn}>
+					<a
+						className="text-teal!"
+						href={PERSONAL_INFO.linkedIn}
+					>
 						LinkedIn
 					</a>
 					·
-					<a className="text-teal!" href={PERSONAL_INFO.gitLinks.github}>
+					<a
+						className="text-teal!"
+						href={PERSONAL_INFO.gitLinks.github}
+					>
 						GitHub
 					</a>
 					·
-					<a className="text-teal!" href={PERSONAL_INFO.gitLinks.gitlab}>
+					<a
+						className="text-teal!"
+						href={PERSONAL_INFO.gitLinks.gitlab}
+					>
 						Gitlab
 					</a>
 				</div>
@@ -153,11 +171,16 @@ const ResumeExperience = () => {
 				{
 					title: t("resumeExperience"),
 					content: experiences.map((experience) => (
-						<div className="mb-6.75" key={experience.name}>
+						<div
+							className="mb-6.75"
+							key={experience.name}
+						>
 							<h3 className="m-0 text-[19px]">
 								{t(experience.name)} · {experience.period}
 							</h3>
-							<p className="text-muted my-0.75 mb-2.5 text-[13px]">{t(experience.meta)}</p>
+							<p className="text-muted my-0.75 mb-2.5 text-[13px]">
+								{t(experience.meta)}
+							</p>
 							<ul className="space-y-1.75">
 								{experience.tasks.map((task) => (
 									<li key={task}>{t(task)}</li>
@@ -184,7 +207,10 @@ const ResumeProjects = () => {
 							<b>{t(project.name)}</b> · {t(project.meta)}
 							<br />
 							{t(project.description)}{" "}
-							<a className="text-teal" href={project.link.url}>
+							<a
+								className="text-teal"
+								href={project.link.url}
+							>
 								{project.link.platform} ↗
 							</a>
 						</p>

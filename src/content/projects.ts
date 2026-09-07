@@ -7,10 +7,7 @@ export type Project = {
 	name: LocaleKey
 	meta: LocaleKey
 	description: LocaleKey
-	link: {
-		platform: GitPlatform
-		url: Url
-	}
+	link: { platform: GitPlatform; url: Url }
 }
 export const projects: Project[] = [
 	{

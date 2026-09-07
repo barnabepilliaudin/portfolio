@@ -38,7 +38,8 @@ const frLocale = {
 	footer: "Fait avec curiosité en France",
 	cynaDevMastra:
 		"Automatisation du support par agents IA Mastra : analyse du ticket, choix de l'action et contrôle des droits.",
-	cynaDevSoar: "Contribution à un SOAR interne traitant plus de 90 % des alertes.",
+	cynaDevSoar:
+		"Contribution à un SOAR interne traitant plus de 90 % des alertes.",
 	cynaDevCursor:
 		"Création de règles Cursor, skills et personas Claude pour améliorer le code généré et réduire les tokens.",
 	cynaDevopsAutomateDeploy:
@@ -47,9 +48,11 @@ const frLocale = {
 		"Playbook Ansible et module Terraform pour déployer des VM Scaleway de façon sécurisée.",
 	cynaDevopsMonitoring:
 		"Exporteur Prometheus, monitoring Slack et automatisations internes avec n8n.",
-	jprojectWebStack: "Plateforme Nuxt.js / Django, puis migration du frontend vers Next.js.",
+	jprojectWebStack:
+		"Plateforme Nuxt.js / Django, puis migration du frontend vers Next.js.",
 	jprojectMobile: "Développement de l'application mobile associée en Flutter.",
-	jProjectDelivery: "Livraison de fonctionnalités majeures sans régression ni bug.",
+	jProjectDelivery:
+		"Livraison de fonctionnalités majeures sans régression ni bug.",
 	resumeBack: "Retour",
 	resumeLanguage: "EN",
 	resumeDownload: "Télécharger le PDF",
@@ -65,10 +68,12 @@ const frLocale = {
 	resumeDevOpsCloud: "DevOps & Cloud",
 	resumeAi: "IA",
 	resumeTools: "Outils",
-	resumeFrontEndSkills: "TypeScript, JavaScript, React / Next.js, Vue / Nuxt, Tailwind CSS",
+	resumeFrontEndSkills:
+		"TypeScript, JavaScript, React / Next.js, Vue / Nuxt, Tailwind CSS",
 	resumeBackEndSkills: "Node.js, Golang",
 	resumeDatabaseSkills: "PostgreSQL, MySQL, MongoDB",
-	resumeDevOpsCloudSkills: "Docker, Kubernetes, Terraform, Ansible, Scaleway, AWS",
+	resumeDevOpsCloudSkills:
+		"Docker, Kubernetes, Terraform, Ansible, Scaleway, AWS",
 	resumeAiSkills: "Claude, Cursor, Mastra",
 	resumeToolsSkills: "Git, GitHub",
 	resumeMaster: "Mastère DevOps",

@@ -16,7 +16,9 @@ const MySelf = () => {
 				<br />
 				<em className="text-teal not-italic">{t("heroAccent")}</em>
 			</h1>
-			<p className="text-muted max-w-lg text-base leading-relaxed md:text-lg">{t("intro")}</p>
+			<p className="text-muted max-w-lg text-base leading-relaxed md:text-lg">
+				{t("intro")}
+			</p>
 		</>
 	)
 }
@@ -36,7 +38,8 @@ const CTASection = () => {
 				className="border-ink inline-flex flex-1 items-center justify-between gap-6 border px-3.5 py-3.5 text-xs font-bold md:flex-none md:px-4.5 md:py-4"
 				href={ROUTES.resume}
 			>
-				<span>{t("viewResume")}</span> <span className="text-teal text-base">↗</span>
+				<span>{t("viewResume")}</span>
+				<span className="text-teal text-base">↗</span>
 			</a>
 		</div>
 	)

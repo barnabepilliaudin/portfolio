@@ -38,7 +38,8 @@ const enLocale = {
 	footer: "Made with curiosity in France",
 	cynaDevMastra:
 		"Automated support with Mastra AI agents: ticket analysis, action selection, and requester authorization.",
-	cynaDevSoar: "Contributed to an internal SOAR processing more than 90% of alerts.",
+	cynaDevSoar:
+		"Contributed to an internal SOAR processing more than 90% of alerts.",
 	cynaDevCursor:
 		"Created Cursor rules, skills, and Claude personas to improve generated code and reduce token usage.",
 	cynaDevopsAutomateDeploy:
@@ -50,7 +51,8 @@ const enLocale = {
 	jprojectWebStack:
 		"Built a Nuxt.js / Django website platform, then migrated the frontend to Next.js.",
 	jprojectMobile: "Developed the companion mobile application in Flutter.",
-	jProjectDelivery: "Shipped major features without regressions or production bugs.",
+	jProjectDelivery:
+		"Shipped major features without regressions or production bugs.",
 	resumeBack: "Back",
 	resumeLanguage: "FR",
 	resumeDownload: "Download PDF",
@@ -66,10 +68,12 @@ const enLocale = {
 	resumeDevOpsCloud: "DevOps & Cloud",
 	resumeAi: "AI",
 	resumeTools: "Tools",
-	resumeFrontEndSkills: "TypeScript, JavaScript, React / Next.js, Vue / Nuxt, Tailwind CSS",
+	resumeFrontEndSkills:
+		"TypeScript, JavaScript, React / Next.js, Vue / Nuxt, Tailwind CSS",
 	resumeBackEndSkills: "Node.js, Golang",
 	resumeDatabaseSkills: "PostgreSQL, MySQL, MongoDB",
-	resumeDevOpsCloudSkills: "Docker, Kubernetes, Terraform, Ansible, Scaleway, AWS",
+	resumeDevOpsCloudSkills:
+		"Docker, Kubernetes, Terraform, Ansible, Scaleway, AWS",
 	resumeAiSkills: "Claude, Cursor, Mastra",
 	resumeToolsSkills: "Git, GitHub",
 	resumeMaster: "Master's in DevOps",

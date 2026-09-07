@@ -20,7 +20,11 @@ const experiences: Experience[] = [
 		period: "2024 — 2026",
 		meta: "cynaDevopsMeta",
 		description: "cynaDevopsDescription",
-		tasks: ["cynaDevopsAutomateDeploy", "cynaDevopsAnsibleTerraform", "cynaDevopsMonitoring"],
+		tasks: [
+			"cynaDevopsAutomateDeploy",
+			"cynaDevopsAnsibleTerraform",
+			"cynaDevopsMonitoring",
+		],
 	},
 	{
 		name: "jproject",
