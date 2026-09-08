@@ -61,7 +61,7 @@ const Navbar = () => {
 	return (
 		<nav
 			id="main-navigation"
-			className={`border-line bg-paper shadow-menu absolute top-18 right-5 left-5 z-10 flex flex-col items-stretch gap-0 border px-5 py-5 text-sm font-semibold md:static md:flex md:flex-row md:items-center md:gap-9 md:border-0 md:bg-transparent md:p-0 md:shadow-none ${isMenuOpen ? "flex" : "hidden"}`}
+			className={`border-line bg-paper shadow-menu absolute top-18 right-5 left-5 z-10 flex flex-col items-stretch gap-0 border p-5 text-sm font-semibold md:static md:flex md:flex-row md:items-center md:gap-9 md:border-0 md:bg-transparent md:p-0 md:shadow-none ${isMenuOpen ? "flex" : "hidden"}`}
 			aria-label="Main navigation"
 		>
 			{map(navbarItems, ({ label, ...props }, count) => (

@@ -11,17 +11,19 @@ type TextProps = {
 const formatId = (id: number) => id.toString().padStart(2, "0")
 
 const ProjectText = ({ className, children }: TextProps) => (
-	<p className={twMerge("text-muted max-w-lg leading-relaxed", className)}>
+	<p className={twMerge("text-muted max-w-lg leading-relaxed py-2", className)}>
 		{children}
 	</p>
 )
 const ProjectMeta = ({ className, children }: TextProps) => (
-	<p className={twMerge("text-teal my-2 mb-5 font-mono text-xs", className)}>
+	<p
+		className={twMerge("text-teal my-2 mb-5 font-mono text-xs py-2", className)}
+	>
 		{children}
 	</p>
 )
 const ProjectTitle = ({ className, children }: TextProps) => (
-	<p className={twMerge("font-display text-3xl font-semibold", className)}>
+	<p className={twMerge("font-display text-3xl font-semibold pb-2", className)}>
 		{children}
 	</p>
 )
