@@ -83,6 +83,7 @@ const frLocale = {
 	resumeSupDeVinci: "Sup de Vinci",
 	resumeLanguagesText: "Français (langue maternelle) · Anglais (B2)",
 	resumeInterestsText: "Sports mécaniques, rugby, football, moto",
+	certifications: "Certifiactions",
 }
 
 export default frLocale
