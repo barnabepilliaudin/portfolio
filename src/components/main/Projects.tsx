@@ -1,33 +1,29 @@
 import ProjectCard from "@components/main/ProjectCard"
+import SectionTitle from "@components/ui/SectionTitle"
 import { projects } from "@content/projects"
-import useLanguage from "@hooks/useLanguage"
 import { map } from "remeda"
 
-const Projects = () => {
-	const { t } = useLanguage()
+import { HTMLIds } from "@/utils/utils"
 
-	return (
-		<section
-			className="border-line border-b py-4 md:py-6"
-			id="profile"
-		>
-			<div className="mb-10 flex items-center gap-6">
-				<p className="text-teal font-mono text-xs font-medium tracking-wide whitespace-nowrap uppercase">
-					02 / {t("projects")}
-				</p>
-				<span className="bg-line h-px w-full" />
-			</div>
-			<div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
-				{map(projects, (project, id) => (
-					<ProjectCard
-						project={project}
-						id={id + 1}
-						key={`project-${project.name}-${id}`}
-					/>
-				))}
-			</div>
-		</section>
-	)
-}
+const Projects = () => (
+	<section
+		className="border-line border-b py-4 md:py-6"
+		id={HTMLIds.projects}
+	>
+		<SectionTitle
+			sectionId={3}
+			sectionName="projects"
+		/>
+		<div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
+			{map(projects, (project, id) => (
+				<ProjectCard
+					project={project}
+					id={id + 1}
+					key={`project-${project.name}-${id}`}
+				/>
+			))}
+		</div>
+	</section>
+)
 
 export default Projects

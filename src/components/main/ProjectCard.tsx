@@ -1,32 +1,10 @@
 import type { Project } from "@content/projects"
 import useLanguage from "@hooks/useLanguage"
-import type { ReactNode } from "react"
-import { twMerge } from "tailwind-merge"
 
-type TextProps = {
-	className?: string
-	children: ReactNode
-}
-
-const formatId = (id: number) => id.toString().padStart(2, "0")
-
-const ProjectText = ({ className, children }: TextProps) => (
-	<p className={twMerge("text-muted max-w-lg leading-relaxed py-2", className)}>
-		{children}
-	</p>
-)
-const ProjectMeta = ({ className, children }: TextProps) => (
-	<p
-		className={twMerge("text-teal my-2 mb-5 font-mono text-xs py-2", className)}
-	>
-		{children}
-	</p>
-)
-const ProjectTitle = ({ className, children }: TextProps) => (
-	<p className={twMerge("font-display text-3xl font-semibold pb-2", className)}>
-		{children}
-	</p>
-)
+import CardDescription from "@/components/ui/CardDesctiption"
+import CardMeta from "@/components/ui/CardMeta"
+import CardTitle from "@/components/ui/CardTitle"
+import { formatId } from "@/utils/utils"
 
 type ProjectCardProps = { project: Project; id: number }
 const ProjectCard = (props: ProjectCardProps) => {
@@ -43,10 +21,10 @@ const ProjectCard = (props: ProjectCardProps) => {
 	return (
 		<article className="border-ink border-t pt-4">
 			<div className="text-teal mb-8 font-mono text-xs">{formatId(id)}</div>
-			<ProjectTitle>{t(name)}</ProjectTitle>
-			<ProjectMeta>{t(meta)}</ProjectMeta>
-			<ProjectText>{t(description)}</ProjectText>
-			<ProjectText>
+			<CardTitle>{t(name)}</CardTitle>
+			<CardMeta>{t(meta)}</CardMeta>
+			<CardDescription>{t(description)}</CardDescription>
+			<CardDescription>
 				<a
 					href={url}
 					target="_blank"
@@ -54,7 +32,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 				>
 					<span className="text-teal">{platform} ↗</span>
 				</a>
-			</ProjectText>
+			</CardDescription>
 		</article>
 	)
 }
