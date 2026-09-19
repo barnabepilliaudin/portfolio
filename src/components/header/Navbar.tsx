@@ -58,7 +58,7 @@ const Navbar = () => {
 		},
 		{
 			label: t("talk"),
-			href: PERSONAL_INFO.email,
+			href: `mailto:${PERSONAL_INFO.email}`,
 			className: "border-b border-ink pb-1 max-md:border-b-0",
 			onClick: handleSetIsOpenMenu(false),
 		},
