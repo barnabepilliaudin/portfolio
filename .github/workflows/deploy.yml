@@ -27,6 +27,8 @@ jobs:
         run: pnpm run check-code
       - name: Build
         run: pnpm run build
+      - name: Create SPA fallback
+        run: cp dist/index.html dist/404.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

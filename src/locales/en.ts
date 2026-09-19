@@ -83,6 +83,7 @@ const enLocale = {
 	resumeSupDeVinci: "Sup de Vinci",
 	resumeLanguagesText: "French (native) · English (B2)",
 	resumeInterestsText: "Motorsports, rugby, football, motorcycling",
+	certifications: "Certifications",
 }
 
 export default enLocale

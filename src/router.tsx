@@ -1,3 +1,4 @@
+import NotFound from "@components/NotFound"
 import Resume from "@components/Resume"
 import {
 	createRootRoute,
@@ -8,7 +9,7 @@ import {
 import App from "@/App"
 import { ROUTES } from "@/constants"
 
-const rootRoute = createRootRoute()
+const rootRoute = createRootRoute({ notFoundComponent: NotFound })
 
 const homeRoute = createRoute({
 	getParentRoute: () => rootRoute,

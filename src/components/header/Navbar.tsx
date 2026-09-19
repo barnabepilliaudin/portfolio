@@ -3,6 +3,7 @@ import useMenu from "@hooks/useMenu"
 import { map } from "remeda"
 
 import { PERSONAL_INFO, ROUTES } from "@/constants"
+import { HTMLIds, linkToHtmlId } from "@/utils/utils"
 
 type NavbarItemProps = {
 	"onClick": () => void
@@ -28,12 +29,17 @@ const Navbar = () => {
 	const navbarItems = [
 		{
 			label: t("work"),
-			href: "#experience",
+			href: linkToHtmlId(HTMLIds.experiences),
 			onClick: handleSetIsOpenMenu(false),
 		},
 		{
-			label: t("about"),
-			href: "#profile",
+			label: t("certifications"),
+			href: linkToHtmlId(HTMLIds.certifications),
+			onClick: handleSetIsOpenMenu(false),
+		},
+		{
+			label: t("projects"),
+			href: linkToHtmlId(HTMLIds.projects),
 			onClick: handleSetIsOpenMenu(false),
 		},
 		{
@@ -60,7 +66,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			id="main-navigation"
+			id={HTMLIds.navigation}
 			className={`border-line bg-paper shadow-menu absolute top-18 right-5 left-5 z-10 flex flex-col items-stretch gap-0 border p-5 text-sm font-semibold md:static md:flex md:flex-row md:items-center md:gap-9 md:border-0 md:bg-transparent md:p-0 md:shadow-none ${isMenuOpen ? "flex" : "hidden"}`}
 			aria-label="Main navigation"
 		>
