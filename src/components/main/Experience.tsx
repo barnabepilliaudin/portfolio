@@ -3,8 +3,8 @@ import SectionTitle from "@components/ui/SectionTitle"
 import useLanguage from "@hooks/useLanguage"
 import { map } from "remeda"
 
+import { HTMLIds } from "@/constants"
 import experiences from "@/content/experiences"
-import { HTMLIds } from "@/utils/utils"
 
 const Experience = () => {
 	const { t } = useLanguage()

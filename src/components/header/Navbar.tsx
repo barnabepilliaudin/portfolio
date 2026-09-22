@@ -2,8 +2,8 @@ import useLanguage from "@hooks/useLanguage"
 import useMenu from "@hooks/useMenu"
 import { map } from "remeda"
 
-import { PERSONAL_INFO, ROUTES } from "@/constants"
-import { HTMLIds, linkToHtmlId } from "@/utils/utils"
+import { HTMLIds, PERSONAL_INFO, ROUTES } from "@/constants"
+import { linkToHtmlId } from "@/utils/formatters"
 
 type NavbarItemProps = {
 	"onClick": () => void

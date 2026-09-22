@@ -2,7 +2,8 @@ import CardTitle from "@components/ui/CardTitle"
 import SectionTitle from "@components/ui/SectionTitle"
 
 import CardMeta from "@/components/ui/CardMeta"
-import { HTMLIds } from "@/utils/utils"
+import { HTMLIds } from "@/constants"
+
 const AwsCertifications = () => (
 	<div className="flex flex-col gap-3">
 		<CardTitle>AWS Certified Solutions Architect - Associate</CardTitle>
