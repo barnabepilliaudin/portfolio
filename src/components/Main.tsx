@@ -3,7 +3,7 @@ import Intro from "@components/main/Intro"
 import Projects from "@components/main/Projects"
 
 import Certifications from "@/components/main/Certifications"
-import { HTMLIds } from "@/utils/utils"
+import { HTMLIds } from "@/constants"
 
 const Main = () => (
 	<main

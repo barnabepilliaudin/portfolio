@@ -1,8 +1,7 @@
 import useLanguage from "@hooks/useLanguage"
 import { keys, map } from "remeda"
 
-import { PERSONAL_INFO } from "@/constants"
-import { GIT_PLATFORMS } from "@/utils/git"
+import { GIT_PLATFORMS, PERSONAL_INFO } from "@/constants"
 
 const EmailButton = () => (
 	<a

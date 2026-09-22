@@ -3,7 +3,7 @@ import SectionTitle from "@components/ui/SectionTitle"
 import { projects } from "@content/projects"
 import { map } from "remeda"
 
-import { HTMLIds } from "@/utils/utils"
+import { HTMLIds } from "@/constants"
 
 const Projects = () => (
 	<section

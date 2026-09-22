@@ -4,7 +4,7 @@ import useLanguage from "@hooks/useLanguage"
 import CardDescription from "@/components/ui/CardDesctiption"
 import CardMeta from "@/components/ui/CardMeta"
 import CardTitle from "@/components/ui/CardTitle"
-import { formatId } from "@/utils/utils"
+import { formatId } from "@/utils/formatters"
 
 type ProjectCardProps = { project: Project; id: number }
 const ProjectCard = (props: ProjectCardProps) => {

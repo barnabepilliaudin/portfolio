@@ -1,6 +1,6 @@
 import useLanguage from "@/hooks/useLanguage"
 import type { LocaleKey } from "@/locales/Locale.type"
-import { formatId } from "@/utils/utils"
+import { formatId } from "@/utils/formatters"
 
 type SectionTitleProps = {
 	sectionId: number

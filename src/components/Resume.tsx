@@ -5,6 +5,7 @@ import { LANGUAGES, type Language, type LocaleKey } from "@locales/Locale.type"
 import { map, values } from "remeda"
 
 import { CV_FILE_NAME, PERSONAL_INFO, ROUTES } from "@/constants"
+import { getResumeUrl } from "@/utils/formatters"
 
 const skillGroups: [LocaleKey, LocaleKey][] = [
 	["resumeFrontEnd", "resumeFrontEndSkills"],
@@ -69,7 +70,7 @@ const ResumeActions = () => {
 			</select>
 			<a
 				className="bg-teal px-4 py-3 font-bold text-white! max-[700px]:px-2.5 max-[700px]:py-2 max-[700px]:text-[13px]"
-				href={`/${CV_FILE_NAME}`}
+				href={getResumeUrl(language)}
 				download={CV_FILE_NAME}
 			>
 				{t("resumeDownload")}
