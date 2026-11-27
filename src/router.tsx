@@ -1,3 +1,4 @@
+import Legal from "@components/Legal"
 import NotFound from "@components/NotFound"
 import Resume from "@components/Resume"
 import {
@@ -23,6 +24,12 @@ const resumeRoute = createRoute({
 	component: Resume,
 })
 
-const routeTree = rootRoute.addChildren([homeRoute, resumeRoute])
+const legalRoute = createRoute({
+	getParentRoute: () => rootRoute,
+	path: ROUTES.legal,
+	component: Legal,
+})
+
+const routeTree = rootRoute.addChildren([homeRoute, resumeRoute, legalRoute])
 
 export const router = createRouter({ routeTree })

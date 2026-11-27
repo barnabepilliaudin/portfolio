@@ -3,7 +3,7 @@ import SectionTitle from "@components/ui/SectionTitle"
 import { projects } from "@content/projects"
 import { map } from "remeda"
 
-import { HTMLIds } from "@/constants"
+import { HTMLIds, SECTION_NUMBERS } from "@/constants"
 
 const Projects = () => (
 	<section
@@ -11,7 +11,7 @@ const Projects = () => (
 		id={HTMLIds.projects}
 	>
 		<SectionTitle
-			sectionId={3}
+			sectionId={SECTION_NUMBERS.projects}
 			sectionName="projects"
 		/>
 		<div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-20">
