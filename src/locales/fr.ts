@@ -83,7 +83,9 @@ const frLocale = {
 	resumeSupDeVinci: "Sup de Vinci",
 	resumeLanguagesText: "Français (langue maternelle) · Anglais (B2)",
 	resumeInterestsText: "Sports mécaniques, rugby, football, moto",
-	certifications: "Certifiactions",
+	certifications: "Certifications",
+	legal: "Mentions légales & confidentialité",
+	verifyBadge: "Vérifier sur Credly",
 }
 
 export default frLocale

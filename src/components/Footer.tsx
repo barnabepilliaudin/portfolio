@@ -1,7 +1,7 @@
 import useLanguage from "@hooks/useLanguage"
 import { keys, map } from "remeda"
 
-import { GIT_PLATFORMS, PERSONAL_INFO } from "@/constants"
+import { GIT_PLATFORMS, PERSONAL_INFO, ROUTES } from "@/constants"
 
 const EmailButton = () => (
 	<a
@@ -40,6 +40,7 @@ const Footer = () => {
 					{` . ${PERSONAL_INFO.firstName} ${PERSONAL_INFO.lastName}`}
 				</span>
 				<span>{t("footer")}</span>
+				<a href={ROUTES.legal}>{t("legal")}</a>
 				<span className="flex gap-4">
 					<GitLinks />
 				</span>

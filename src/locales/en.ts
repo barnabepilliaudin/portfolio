@@ -84,6 +84,8 @@ const enLocale = {
 	resumeLanguagesText: "French (native) · English (B2)",
 	resumeInterestsText: "Motorsports, rugby, football, motorcycling",
 	certifications: "Certifications",
+	legal: "Legal notice & privacy",
+	verifyBadge: "Verify on Credly",
 }
 
 export default enLocale

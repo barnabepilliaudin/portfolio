@@ -3,7 +3,7 @@ import SectionTitle from "@components/ui/SectionTitle"
 import useLanguage from "@hooks/useLanguage"
 import { map } from "remeda"
 
-import { HTMLIds } from "@/constants"
+import { HTMLIds, SECTION_NUMBERS } from "@/constants"
 import experiences from "@/content/experiences"
 
 const Experience = () => {
@@ -15,7 +15,7 @@ const Experience = () => {
 			id={HTMLIds.experiences}
 		>
 			<SectionTitle
-				sectionId={1}
+				sectionId={SECTION_NUMBERS.experience}
 				sectionName="experience"
 			/>
 			<p className="text-muted mb-10 max-w-2xl pb-10 text-lg leading-normal md:text-xl">

@@ -1,8 +1,8 @@
+import LanguageSelect from "@components/ui/LanguageSelect"
 import experiences from "@content/experiences"
 import { projects } from "@content/projects"
 import useLanguage from "@hooks/useLanguage"
-import { LANGUAGES, type Language, type LocaleKey } from "@locales/Locale.type"
-import { map, values } from "remeda"
+import type { LocaleKey } from "@locales/Locale.type"
 
 import { CV_FILE_NAME, PERSONAL_INFO, ROUTES } from "@/constants"
 import { getResumeUrl } from "@/utils/formatters"
@@ -43,7 +43,7 @@ const ResumeSection = ({ sections }: { sections: ResumeSectionItem[] }) => (
 )
 
 const ResumeActions = () => {
-	const { language, setLanguage, t } = useLanguage()
+	const { language, t } = useLanguage()
 
 	return (
 		<div className="fixed top-5 right-5 z-1 flex gap-2 max-[700px]:top-3 max-[700px]:right-3 print:hidden">
@@ -53,21 +53,7 @@ const ResumeActions = () => {
 			>
 				← {t("resumeBack")}
 			</a>
-			<select
-				className="border-line text-ink cursor-pointer appearance-none border bg-white px-4 py-3 font-bold max-[700px]:px-2.5 max-[700px]:py-2 max-[700px]:text-[13px]"
-				aria-label={t("resumeLanguage")}
-				value={language}
-				onChange={(event) => setLanguage(event.target.value as Language)}
-			>
-				{map(values(LANGUAGES), (option) => (
-					<option
-						key={option}
-						value={option}
-					>
-						{option.toUpperCase()}
-					</option>
-				))}
-			</select>
+			<LanguageSelect />
 			<a
 				className="bg-teal px-4 py-3 font-bold text-white! max-[700px]:px-2.5 max-[700px]:py-2 max-[700px]:text-[13px]"
 				href={getResumeUrl(language)}
@@ -239,7 +225,7 @@ const ResumeMain = () => {
 }
 
 const Resume = () => {
-	const { language } = useLanguage()
+	const { language, t } = useLanguage()
 
 	return (
 		<div
@@ -254,6 +240,14 @@ const Resume = () => {
 					<ResumeMain />
 				</div>
 			</article>
+			<p className="pb-8 text-center font-mono text-xs print:hidden">
+				<a
+					className="text-teal!"
+					href={ROUTES.legal}
+				>
+					{t("legal")}
+				</a>
+			</p>
 		</div>
 	)
 }

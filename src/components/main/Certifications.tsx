@@ -1,33 +1,54 @@
 import CardTitle from "@components/ui/CardTitle"
 import SectionTitle from "@components/ui/SectionTitle"
+import useLanguage from "@hooks/useLanguage"
 
 import CardMeta from "@/components/ui/CardMeta"
-import { HTMLIds } from "@/constants"
+import {
+	BADGE_SIZE_PX,
+	CERTIFICATIONS,
+	HTMLIds,
+	SECTION_NUMBERS,
+} from "@/constants"
 
-const AwsCertifications = () => (
-	<div className="flex flex-col gap-3">
-		<CardTitle>AWS Certified Solutions Architect - Associate</CardTitle>
-		<CardMeta> 08/2026 - 08/2029 </CardMeta>
-		<div
-			data-iframe-width="150"
-			data-iframe-height="270"
-			data-share-badge-id="18c641be-0867-46fd-a27b-cfa68eba1739"
-			data-share-badge-host="https://www.credly.com"
-		></div>
-		<script
-			type="text/javascript"
-			async
-			src="//cdn.credly.com/assets/utilities/embed.js"
-		></script>
-	</div>
-)
+const AwsCertifications = () => {
+	const { t } = useLanguage()
+	const { title, issuedOn, expiresOn, badgeUrl, badgeImage } =
+		CERTIFICATIONS.awsSaa
+
+	return (
+		<div className="flex flex-col gap-3">
+			<CardTitle>{title}</CardTitle>
+			<CardMeta>
+				{issuedOn} - {expiresOn}
+			</CardMeta>
+			<a
+				className="flex w-fit flex-col items-center gap-2"
+				href={badgeUrl}
+				target="_blank"
+				rel="noreferrer"
+			>
+				<img
+					src={badgeImage}
+					alt={`${title} badge`}
+					width={BADGE_SIZE_PX}
+					height={BADGE_SIZE_PX}
+					loading="lazy"
+				/>
+				<span className="text-teal font-mono text-xs">
+					{t("verifyBadge")} ↗
+				</span>
+			</a>
+		</div>
+	)
+}
+
 const Certifications = () => (
 	<section
 		className="py-1.5 md:py-6.25"
 		id={HTMLIds.certifications}
 	>
 		<SectionTitle
-			sectionId={2}
+			sectionId={SECTION_NUMBERS.certifications}
 			sectionName="certifications"
 		/>
 		<AwsCertifications />
